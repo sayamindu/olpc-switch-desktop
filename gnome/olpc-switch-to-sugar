@@ -1,0 +1,13 @@
+#!/bin/bash
+
+die() {
+	zenity --error --title "OLPC Desktop Switcher" --text "Could not switch desktops; an internal error has occurred."
+	exit 1
+}
+
+
+cd /home/olpc || die
+echo "sugar" > /home/olpc/.olpc-active-desktop || die
+zenity --info --title "OLPC Desktop Switcher" --text "Desktop environment switched to Sugar learning environment.\nPlease restart your computer to complete this change."
+exit 0
+

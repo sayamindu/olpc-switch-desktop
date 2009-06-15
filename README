@@ -1,0 +1,46 @@
+olpc-switch-desktop is a collection of utilities for switching between
+desktop environments.
+
+It consists of:
+ 1. A sugar control panel extension which allows the user to switch to GNOME
+ 2. A GNOME program which allows the user to switch to Sugar
+
+The change is made through the simple scheme of writing the preferred desktop
+environment at /home/olpc/.olpc-default-desktop (a simple text file containing
+either "gnome" or "sugar"). It is expected that this file will be parsed
+(e.g. in an xsession script) during X startup to decide which environment to
+launch.
+
+Author: Daniel Drake <dsd@laptop.org>
+
+
+INSTALLATION
+============
+
+Put the olpc-switch-to-sugar.desktop file under gnome/ in
+/usr/share/applications
+Put the olpc-switch-to-sugar executable somewhere in your $PATH
+
+Install the contents of the sugar directory at
+/usr/share/sugar/extensions/cpsection/switchdesktop/
+
+
+TODO
+====
+design review
+
+
+TODO: Sugar
+===========
+Make buttons a decent size
+screenshots of GNOME + Sugar
+i18n
+icon for sugar control panel
+
+
+TODO: GNOME
+===========
+entry on gnome desktop
+icon on gnome desktop
+cancel button
+
