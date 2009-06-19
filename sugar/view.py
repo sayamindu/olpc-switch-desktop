@@ -14,14 +14,17 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
+import os
 import gtk
 import gobject
 from gettext import gettext as _
 
 from sugar.graphics import style
+from sugar.graphics.icon import Icon
 
 from jarabe.controlpanel.sectionview import SectionView
 from jarabe.controlpanel.inlinealert import InlineAlert
+from jarabe import config
 
 class SwitchDesktop(SectionView):
     def __init__(self, model, alerts):
@@ -40,48 +43,80 @@ class SwitchDesktop(SectionView):
         self._sugar_desc_label = gtk.Label(
             _("Sugar is the graphical user interface that you are looking at. "
               "It is a learning environment designed for children."))
+        self._sugar_desc_label.set_size_request(gtk.gdk.screen_width() / 2, -1)
         self._sugar_desc_label.set_line_wrap(True)
         self.pack_start(self._sugar_desc_label, False)
 
         self._gnome_opt_label = gtk.Label(
             _("As an alternative to Sugar, you can switch to the GNOME "
-              "Desktop Environment by clicking the button below."))
+              "desktop environment by clicking the button below."))
         self._gnome_opt_label.set_line_wrap(True)
+        self._gnome_opt_label.set_size_request(gtk.gdk.screen_width() / 2, -1)
         self.pack_start(self._gnome_opt_label, False)
 
         self._restart_label = gtk.Label(
             _("Restart your computer to complete the change to the GNOME "
               "desktop environment."))
         self._restart_label.set_line_wrap(True)
+        self._restart_label.set_size_request(gtk.gdk.screen_width() / 2, -1)
         self.pack_start(self._restart_label, False)
 
         self._undo_return_label = gtk.Label()
         self._undo_return_label.set_markup(
-            _("Remember, you can return to Sugar later, by navigating to the GNOME "
-              "<b>Applications</b> menu, then to <b>System</b>, then click "
-              "<b>Switch to Sugar</b>. Or, click the <b>Cancel change</b> button below if you "
-              "would like to continue using Sugar as your desktop environment."))
+            _("Remember, you can return to Sugar later by clicking on the "
+              "<b>Switch to Sugar</b> icon on the GNOME desktop. Or, click "
+              "the <b>Cancel changes</b> button below if you would like to "
+              "continue using Sugar as your desktop environment."))
         self._undo_return_label.set_line_wrap(True)
+        self._undo_return_label.set_size_request(gtk.gdk.screen_width() / 2, -1)
         self.pack_start(self._undo_return_label, False)
 
 
-        self._switch_button = gtk.Button("Switch to GNOME")
-        self._switch_button.set_label("Switch to GNOME")
-        self.pack_start(self._switch_button, False)
+        self._switch_align = gtk.Alignment(xalign=0.5, yalign=0.5)
+        self.pack_start(self._switch_align)
 
-        self._undo_button = gtk.Button(_("Cancel change"))
-        self.pack_start(self._undo_button, False)
+        self._switch_button = gtk.Button("Switch to GNOME")
+        self._switch_button.set_image(Icon(icon_name="module-switch-desktop"))
+        self._switch_align.add(self._switch_button)
+
+
+        self._undo_align = gtk.Alignment(xalign=0.5, yalign=0.5)
+        self.pack_start(self._undo_align)
+
+        self._undo_button = gtk.Button(_("Cancel changes"))
+        self._undo_button.set_image(Icon(icon_name="dialog-cancel"))
+        self._undo_align.add(self._undo_button)
+
+        self._unknown_align = gtk.Alignment(xalign=0.5, yalign=0.5)
+        self.pack_start(self._unknown_align)
 
         self._fix_unknown_button = gtk.Button(_("Set Sugar as active desktop"))
-        self.pack_start(self._fix_unknown_button, False)
+        self._fix_unknown_button.set_image(Icon(icon_name="computer-xo"))
+        self._unknown_align.add(self._fix_unknown_button)
 
         self._return_label = gtk.Label()
         self._return_label.set_markup(
-            _("You can return to Sugar later, by navigating to the GNOME "
-              "<b>Applications</b> menu, then to <b>System</b>, then click "
-              "<b>Switch to Sugar</b>."))
+            _("You can return to Sugar later, by clicking on the <b>Switch "
+              "to Sugar</b> icon on the GNOME desktop. This is also available "
+              "from the GNOME <b>Applications</b> menu."))
         self._return_label.set_line_wrap(True)
+        self._return_label.set_size_request(gtk.gdk.screen_width() / 2, -1)
         self.pack_start(self._return_label, False)
+
+        self._img_table = gtk.Table(rows=2, columns=2)
+        self.pack_start(self._img_table, False);
+
+        img_path = os.path.join(config.ext_path, 'cpsection', 'switchdesktop')
+
+        img = gtk.image_new_from_file(os.path.join(img_path, 'sugar.png'));
+        self._img_table.attach(img, 0, 1, 0, 1)
+        label = gtk.Label("Sugar")
+        self._img_table.attach(label, 0, 1, 1, 2)
+
+        img = gtk.image_new_from_file(os.path.join(img_path, 'gnome.png'));
+        self._img_table.attach(img, 1, 2, 0, 1)
+        label = gtk.Label("GNOME")
+        self._img_table.attach(label, 1, 2, 1, 2)
 
         self.setup()
         self._update()
@@ -110,14 +145,16 @@ class SwitchDesktop(SectionView):
         if active == "Sugar":
             self._sugar_desc_label.show()
             self._gnome_opt_label.show()
-            self._switch_button.show_all()
+            self._switch_align.show_all()
             self._return_label.show()
         elif active == "GNOME":
             self._restart_label.show()
             self._undo_return_label.show()
-            self._undo_button.show_all()
+            self._undo_align.show_all()
         elif active == "Unknown":
-            self._fix_unknown_button.show_all()
+            self._unknown_align.show_all()
+
+        self._img_table.show_all()
 
     def _do_undo(self):
         self._model.undo_switch()
