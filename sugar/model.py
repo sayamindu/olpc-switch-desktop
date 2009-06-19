@@ -30,14 +30,19 @@ def undo_switch():
     _do_switch("sugar")
 
 def get_active_desktop():
-    fd = open(ACTIVE_DESKTOP_FILE, "r")
-    desktop = fd.read().strip()
-    fd.close()
+    desktop = "sugar"
+    try:
+        fd = open(ACTIVE_DESKTOP_FILE, "r")
+        desktop = fd.read().strip()
+        fd.close()
+    except IOError, e:
+        if e.errno != 2:
+            desktop = "unknown"
+
     if desktop == "sugar":
         return "Sugar"
     elif desktop == "gnome":
         return "GNOME"
     else:
         return "Unknown"
-
 
