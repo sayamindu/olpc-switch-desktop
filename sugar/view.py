@@ -24,6 +24,7 @@ from sugar.graphics.icon import Icon
 
 from jarabe.controlpanel.sectionview import SectionView
 from jarabe.controlpanel.inlinealert import InlineAlert
+from jarabe.model.session import get_session_manager
 from jarabe import config
 
 class SwitchDesktop(SectionView):
@@ -33,6 +34,7 @@ class SwitchDesktop(SectionView):
         self._switch_button_handler = None
         self._undo_button_handler = None
         self._fix_unknown_button_handler = None
+        self._restart_button_handler = None
 
         self.set_border_width(style.DEFAULT_SPACING * 2)
         self.set_spacing(style.DEFAULT_SPACING)
@@ -75,7 +77,7 @@ class SwitchDesktop(SectionView):
         self._switch_align = gtk.Alignment(xalign=0.5, yalign=0.5)
         self.pack_start(self._switch_align)
 
-        self._switch_button = gtk.Button("Switch to GNOME")
+        self._switch_button = gtk.Button(_("Switch to GNOME"))
         self._switch_button.set_image(Icon(icon_name="module-switch-desktop"))
         self._switch_align.add(self._switch_button)
 
@@ -83,9 +85,18 @@ class SwitchDesktop(SectionView):
         self._undo_align = gtk.Alignment(xalign=0.5, yalign=0.5)
         self.pack_start(self._undo_align)
 
+        hbox = gtk.HButtonBox()
+        hbox.set_layout(gtk.BUTTONBOX_END)
+        hbox.set_spacing(style.DEFAULT_SPACING)
+        self._undo_align.add(hbox)
+
         self._undo_button = gtk.Button(_("Cancel changes"))
         self._undo_button.set_image(Icon(icon_name="dialog-cancel"))
-        self._undo_align.add(self._undo_button)
+        hbox.add(self._undo_button)
+
+        self._restart_button = gtk.Button(_("Restart now"))
+        self._restart_button.set_image(Icon(icon_name="system-restart"))
+        hbox.add(self._restart_button)
 
         self._unknown_align = gtk.Alignment(xalign=0.5, yalign=0.5)
         self.pack_start(self._unknown_align)
@@ -128,10 +139,13 @@ class SwitchDesktop(SectionView):
                 self._undo_button.connect('clicked', self._undo_button_cb)
         self._fix_unknown_button_handler = \
                 self._fix_unknown_button.connect('clicked', self._undo_button_cb)
+        self._restart_button_handler = \
+                self._restart_button.connect('clicked', self._restart_button_cb)
         # FIXME: disconnect anywhere?
 
     def undo(self):
         self._do_undo()
+        self._update()
 
     def _update(self):
         self.hide_all()
@@ -166,4 +180,7 @@ class SwitchDesktop(SectionView):
     def _undo_button_cb(self, widget):
         self._do_undo()
         self._update()
+
+    def _restart_button_cb(self, widget):
+        get_session_manager().logout()
 
