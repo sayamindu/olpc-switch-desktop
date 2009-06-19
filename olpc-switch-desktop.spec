@@ -8,7 +8,7 @@ License: GPL
 URL: http://dev.laptop.org/git/users/dsd/olpc-switch-desktop
 Source0: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: python, sugar, gtk2, desktop-file-utils
+Requires: python, sugar, gtk2, desktop-file-utils, zenity, dbus
 BuildArch: noarch
 
 

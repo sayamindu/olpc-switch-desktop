@@ -5,9 +5,10 @@ die() {
 	exit 1
 }
 
+zenity --question --title "Switch desktop" --text "Click OK to switch to the Sugar learning environment.\nAll active applications will be closed."
+[[ $? != 0 ]] && exit 0
 
-cd /home/olpc || die
-echo "sugar" > /home/olpc/.olpc-active-desktop || die
-zenity --info --title "OLPC Desktop Switcher" --text "Desktop environment switched to Sugar learning environment.\nPlease restart your computer to complete this change."
+echo "sugar" > ~/.olpc-active-desktop || die
+dbus-send --session --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1 || die
 exit 0
 
