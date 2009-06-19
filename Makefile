@@ -18,3 +18,6 @@ $(DISTFILE):
 	tar -cjf $@ -C .dist olpc-switch-desktop-$(VERSION)
 	-rm -rf .dist
 
+clean:
+	-rm -rf $(DISTFILE) noarch *.src.rpm
+

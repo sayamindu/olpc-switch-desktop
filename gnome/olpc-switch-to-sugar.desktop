@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Switch to Sugar
 Exec=olpc-switch-to-sugar
-Icon=utilities-terminal
+Icon=olpc-switch-to-sugar
 Type=Application
 Categories=System
+StartupNotify=true
 
