@@ -1,5 +1,5 @@
 Name:		olpc-switch-desktop
-Version:	0.1
+Version:	0.2
 Release:	1%{?dist}
 Summary:	OLPC desktop switching utilities
 
@@ -58,6 +58,12 @@ fi
 %{_datadir}/sugar/extensions/cpsection/switchdesktop
 
 %changelog
+* Fri Jun 19 2009 Daniel Drake <dsd@laptop.org> - 0.2-1
+- GNOME app: add icon, put launcher on desktop by default, auto-logout after
+  change
+- Sugar extension: add screenshots, add restart button, don't crash on absence
+  of .olpc-active-desktop
+
 * Mon Jun 15 2009 Daniel Drake <dsd@laptop.org> - 0.1-1
 - Initial release
 
