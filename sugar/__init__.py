@@ -17,6 +17,6 @@
 from gettext import gettext as _
 
 CLASS = 'SwitchDesktop'
-ICON = 'module-language'
+ICON = 'module-switch-desktop'
 TITLE = _('Switch desktop')
 

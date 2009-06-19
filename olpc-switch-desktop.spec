@@ -35,7 +35,9 @@ install -m644 gnome/olpc-switch-to-sugar.desktop $RPM_BUILD_ROOT/etc/skel/Deskto
 install -m644 gnome/olpc-switch-to-sugar.svg $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps
 
 install -d $RPM_BUILD_ROOT/usr/share/sugar/extensions/cpsection/switchdesktop
-install -t $RPM_BUILD_ROOT/usr/share/sugar/extensions/cpsection/switchdesktop sugar/__init__.py sugar/view.py sugar/model.py sugar/gnome.png sugar/sugar.png
+install -d $RPM_BUILD_ROOT/usr/share/sugar/data/icons
+install -m644 -t $RPM_BUILD_ROOT/usr/share/sugar/extensions/cpsection/switchdesktop sugar/__init__.py sugar/view.py sugar/model.py sugar/gnome.png sugar/sugar.png
+install -m644 sugar/module-switch-desktop.svg $RPM_BUILD_ROOT/usr/share/sugar/data/icons
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,6 +57,7 @@ fi
 %config %{_sysconfdir}/skel/Desktop/olpc-switch-to-sugar.desktop
 %attr(0644,-,-) %{_datadir}/icons/hicolor/scalable/apps/olpc-switch-to-sugar.svg
 %attr(0644,-,-) %{_datadir}/applications/olpc-switch-to-sugar.desktop
+%attr(0644,-,-) %{_datadir}/sugar/data/icons/module-switch-desktop.svg
 %{_datadir}/sugar/extensions/cpsection/switchdesktop
 
 %changelog
