@@ -1,5 +1,5 @@
 Name:		olpc-switch-desktop
-Version:	0.3
+Version:	0.4
 Release:	1%{?dist}
 Summary:	OLPC desktop switching utilities
 
