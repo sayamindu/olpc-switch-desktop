@@ -1,14 +1,47 @@
-#!/bin/bash
+#!/usr/bin/env python
 
-die() {
-	zenity --error --title "OLPC Desktop Switcher" --text "Could not switch desktops; an internal error has occurred."
-	exit 1
-}
+import sys
+import os
+import os.path
+import subprocess
 
-zenity --question --title "Switch desktop" --text "Click OK to switch to the Sugar learning environment.\nAll active applications will be closed."
-[[ $? != 0 ]] && exit 0
+import pygtk
+pygtk.require('2.0')
+import gtk
 
-echo "sugar" > ~/.olpc-active-desktop || die
-dbus-send --session --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1 || die
-exit 0
+def do_switch():
+	try:
+		fd = open(os.path.join(os.environ['HOME'], ".olpc-active-desktop"), "w")
+		fd.write("sugar")
+		fd.close()
+	except Exception, e:
+		print "Error:", e
+		dlg = gtk.MessageDialog(type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK,
+			message_format="Could not switch desktop: an internal error has "
+			"occurred.")
+		dlg.run()
+		dlg.destroy()
+		return
+	subprocess.call(['dbus-send','--session','--dest=org.gnome.SessionManager',
+		'/org/gnome/SessionManager','org.gnome.SessionManager.Logout',
+		'uint32:1'])
 
+def main():
+	dlg = gtk.MessageDialog(parent=None, type=gtk.MESSAGE_INFO,
+		buttons=gtk.BUTTONS_OK_CANCEL,
+		message_format="Click OK to switch to the Sugar learning "
+		"environment.\nAll active applications will be closed.")
+	dlg.set_title("Switch desktop")
+	dlg.set_property("skip-taskbar-hint", False)
+
+	icon_theme = gtk.icon_theme_get_default()
+	pixbuf = icon_theme.load_icon("olpc-switch-to-sugar", 48, 0)
+	dlg.set_icon(pixbuf)
+
+	resp = dlg.run()
+	dlg.destroy()
+	if resp == gtk.RESPONSE_OK:
+		do_switch()
+
+if __name__ == "__main__":
+	main()

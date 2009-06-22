@@ -8,7 +8,7 @@ License: GPL
 URL: http://dev.laptop.org/git/users/dsd/olpc-switch-desktop
 Source0: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: python, sugar, gtk2, desktop-file-utils, zenity, dbus
+Requires: python, sugar, gtk2, desktop-file-utils, dbus
 BuildArch: noarch
 
 
@@ -61,6 +61,12 @@ fi
 %{_datadir}/sugar/extensions/cpsection/switchdesktop
 
 %changelog
+* Mon Jun 22 2009 Daniel Drake <dsd@laptop.org> - 0.4-1
+- Rewrite GNOME app in PyGTK
+
+* Fri Jun 19 2009 Daniel Drake <dsd@laptop.org> - 0.3-1
+- Fix Sugar control panel icon installation
+
 * Fri Jun 19 2009 Daniel Drake <dsd@laptop.org> - 0.2-1
 - GNOME app: add icon, put launcher on desktop by default, auto-logout after
   change
