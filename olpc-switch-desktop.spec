@@ -39,6 +39,9 @@ install -d $RPM_BUILD_ROOT/usr/share/sugar/data/icons
 install -m644 -t $RPM_BUILD_ROOT/usr/share/sugar/extensions/cpsection/switchdesktop sugar/__init__.py sugar/view.py sugar/model.py sugar/gnome.png sugar/sugar.png
 install -m644 sugar/module-switch-desktop.svg $RPM_BUILD_ROOT/usr/share/sugar/data/icons
 
+make -C po install DESTDIR="$RPM_BUILD_ROOT"
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -49,7 +52,7 @@ if [ -x %{_bindir}/gtk-update-icon-cache ]; then
 	%{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
 fi
 
-%files
+%files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc README COPYING
 

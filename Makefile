@@ -2,7 +2,7 @@ VERSION=$(shell cat VERSION)
 CWD=$(shell pwd)
 DISTFILE=olpc-switch-desktop-$(VERSION).tar.bz2
 
-FILES=COPYING README gnome sugar VERSION
+FILES=COPYING README gnome sugar po VERSION
 
 all:
 
@@ -17,7 +17,12 @@ $(DISTFILE):
 	cp -a $(FILES) .dist/olpc-switch-desktop-$(VERSION)
 	tar -cjf $@ -C .dist olpc-switch-desktop-$(VERSION)
 	-rm -rf .dist
+.PHONY: $(DISTFILE)
+
+po:
+	make -C po
 
 clean:
 	-rm -rf $(DISTFILE) noarch *.src.rpm
+	make -C po clean
 
