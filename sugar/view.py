@@ -17,7 +17,7 @@
 import os
 import gtk
 import gobject
-from gettext import gettext as _
+import gettext
 
 from sugar.graphics import style
 from sugar.graphics.icon import Icon
@@ -26,6 +26,8 @@ from jarabe.controlpanel.sectionview import SectionView
 from jarabe.controlpanel.inlinealert import InlineAlert
 from jarabe.model.session import get_session_manager
 from jarabe import config
+
+_ = lambda msg: gettext.dgettext('olpc-switch-desktop', msg)
 
 class SwitchDesktop(SectionView):
     def __init__(self, model, alerts):

@@ -4,10 +4,13 @@ import sys
 import os
 import os.path
 import subprocess
+import gettext
 
 import pygtk
 pygtk.require('2.0')
 import gtk
+
+_ = lambda msg: gettext.dgettext('olpc-switch-desktop', msg)
 
 def do_switch():
 	try:
@@ -17,8 +20,8 @@ def do_switch():
 	except Exception, e:
 		print "Error:", e
 		dlg = gtk.MessageDialog(type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK,
-			message_format="Could not switch desktop: an internal error has "
-			"occurred.")
+			message_format=_("Could not switch desktop: an internal error has "
+			"occurred."))
 		dlg.run()
 		dlg.destroy()
 		return
@@ -29,8 +32,8 @@ def do_switch():
 def main():
 	dlg = gtk.MessageDialog(parent=None, type=gtk.MESSAGE_INFO,
 		buttons=gtk.BUTTONS_OK_CANCEL,
-		message_format="Click OK to switch to the Sugar learning "
-		"environment.\nAll active applications will be closed.")
+		message_format=_("Click OK to switch to the Sugar learning "
+		"environment.\nAll active applications will be closed."))
 	dlg.set_title("Switch desktop")
 	dlg.set_property("skip-taskbar-hint", False)
 
