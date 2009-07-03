@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR One Laptop per Child
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: devel@lists.laptop.org\n"
+"POT-Creation-Date: 2009-06-26 14:21+0100\n"
+"PO-Revision-Date: 2009-07-03 04:31-0400\n"
+"Last-Translator: Chanaka Aruna Munasinghe <chanakaam@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
+
+#: gnome/olpc-switch-to-sugar:23
+msgid "Could not switch desktop: an internal error has occurred."
+msgstr "වැඩතලයට මාරුවීමට නොහැකි විය: අභ්‍යන්තර දෝෂයක් හට ගැණින."
+
+#: gnome/olpc-switch-to-sugar:35
+msgid ""
+"Click OK to switch to the Sugar learning environment.\n"
+"All active applications will be closed."
+msgstr ""
+"Sugar ඉගෙනුම් පාරිසරිකයට මාරු වීමට හරි මත ක්ලික් කරන්න.\n"
+"සියලු සක්‍රීය යෙදුම් වසාදමනු  ලබයි."
+
+#: sugar/view.py:48
+msgid ""
+"Sugar is the graphical user interface that you are looking at. It is a "
+"learning environment designed for children."
+msgstr ""
+"Sugar යනු ඔබට දිස්වෙන චිත්‍රක පරිශීලක අතුරුමුහුණතයි. එය කුඩා ළමයින් සඳහා "
+"නිමැ වූ අධ්‍යාපනික පරිසරයකි."
+
+#: sugar/view.py:55
+msgid ""
+"As an alternative to Sugar, you can switch to the GNOME desktop environment "
+"by clicking the button below."
+msgstr ""
+"පහත බොත්තම ක්ලික් කිරීමෙන් Sugar පරිසරයට විකල්පයක් ලෙස ඇති GNOME පරිසරයට "
+"මාරු විය හැක."
+
+#: sugar/view.py:62
+msgid ""
+"Restart your computer to complete the change to the GNOME desktop "
+"environment."
+msgstr "GNOME වැඩතල පරිසරයට කළ වෙනස්කම් නිම කිරීමට ඔබේ පරිගණකය යළි ආරම්භ කරන්න"
+
+#: sugar/view.py:70
+msgid ""
+"Remember, you can return to Sugar later by clicking on the <b>Switch to "
+"Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> "
+"button below if you would like to continue using Sugar as your desktop "
+"environment."
+msgstr ""
+"මතක තබා ගන්න, GNOME වැඩතලයේ ඇති <b>Sugar වෙතට යන්න</b> අයිකනය ක්ලික් කිරීම "
+"මඟින් පසුව Sugar වෙතට පැමිණිය හැක. හෝ ඔබට තව දුරටත් Sugar ඔබේ වැඩතල පරිසරය "
+"ලෙසට භාවිත කිරීමට අවශ්‍ය නම් පහත ඇති <b>වෙනස්කම් අහෝසි කරන්න</b> ක්ලික් "
+"කරන්න."
+
+#: sugar/view.py:82
+msgid "Switch to GNOME"
+msgstr "GNOME වෙතට යන්න"
+
+#: sugar/view.py:95
+msgid "Cancel changes"
+msgstr "වෙනස් කිරීම් අවලංගු කරන්න"
+
+#: sugar/view.py:99
+msgid "Restart now"
+msgstr "යළි ආරම්භ කරන්න"
+
+#: sugar/view.py:106
+msgid "Set Sugar as active desktop"
+msgstr "සක්‍රීය වැඩතලය ලෙසට Sugar සකසන්න"
+
+#: sugar/view.py:112
+msgid ""
+"You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> "
+"icon on the GNOME desktop. This is also available from the GNOME "
+"<b>Applications</b> menu."
+msgstr ""
+"GNOME වැඩතලයේ ඇති <b>Sugar වෙතට යන්න</b> අයිකනය ක්ලික් කිරීම මඟින් පසුව "
+"Sugar වෙතට පැමිණිය හැක. මෙය GNOME <b>යෙදුම්</b> මෙනුව තුළ ද ඇත."
+
+#: sugar/view.py:157
+msgid "Active desktop environment: "
+msgstr "සක්‍රීය වැඩතල පාරිසරය: "
