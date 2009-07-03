@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR One Laptop per Child
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: devel@lists.laptop.org\n"
+"POT-Creation-Date: 2009-06-26 14:21+0100\n"
+"PO-Revision-Date: 2009-07-02 00:32-0400\n"
+"Last-Translator: Rafael Ortiz <rafael@laptop.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
+
+#: gnome/olpc-switch-to-sugar:23
+msgid "Could not switch desktop: an internal error has occurred."
+msgstr "No se pudo cambiar de escritorio: un error interno ha ocurrido"
+
+#: gnome/olpc-switch-to-sugar:35
+msgid ""
+"Click OK to switch to the Sugar learning environment.\n"
+"All active applications will be closed."
+msgstr ""
+"Haga clic en OK para cambiar al ambiente de aprendizaje Sugar.\n"
+"Todas las aplicaciones activas se cerraran."
+
+#: sugar/view.py:48
+msgid ""
+"Sugar is the graphical user interface that you are looking at. It is a "
+"learning environment designed for children."
+msgstr ""
+"Sugar es la interfaz grafica de usuario que usted esta observando.Es un "
+"ambiente de aprendizaje hacho para niños."
+
+#: sugar/view.py:55
+msgid ""
+"As an alternative to Sugar, you can switch to the GNOME desktop environment "
+"by clicking the button below."
+msgstr ""
+"Como una alternativa a Sugar, usted puede cambiar a el escritorio GNOME, "
+"haciendo click en el boton de abajo. "
+
+#: sugar/view.py:62
+msgid ""
+"Restart your computer to complete the change to the GNOME desktop "
+"environment."
+msgstr ""
+"Reinicie su computador para completar el cambio hacie al ambiente de "
+"escritorio GNOME."
+
+#: sugar/view.py:70
+msgid ""
+"Remember, you can return to Sugar later by clicking on the <b>Switch to "
+"Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> "
+"button below if you would like to continue using Sugar as your desktop "
+"environment."
+msgstr ""
+"Recuerde, usted puede volver a Sugar despues haciendo clic  en el icono "
+"<b>Cambiar a Sugar</b>  en el escritorio  GNOME. O, haga clic en el boton de "
+"abajo <b>Cancelar cambios</b> si usted quiere continuar usando  Sugar como "
+"su ambiente de escritorio."
+
+#: sugar/view.py:82
+msgid "Switch to GNOME"
+msgstr "Cambiar a GNOME"
+
+#: sugar/view.py:95
+msgid "Cancel changes"
+msgstr "Cancelar cambios"
+
+#: sugar/view.py:99
+msgid "Restart now"
+msgstr "Reiniciar ahora"
+
+#: sugar/view.py:106
+msgid "Set Sugar as active desktop"
+msgstr "Seleccione Sugar como su escritorio activo"
+
+#: sugar/view.py:112
+msgid ""
+"You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> "
+"icon on the GNOME desktop. This is also available from the GNOME "
+"<b>Applications</b> menu."
+msgstr ""
+"Usted puede volver a Sugar despues, haciendo clic en el icono <b>Cambiar a "
+"Sugar</b> en el escritorio GNOME. Este esta tambien disponible desde el menu "
+"de <b>Applicaciones</b> de GNOME."
+
+#: sugar/view.py:157
+msgid "Active desktop environment: "
+msgstr "Ambiente de escritorio activo:"
