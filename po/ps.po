@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR One Laptop per Child
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: devel@lists.laptop.org\n"
+"POT-Creation-Date: 2009-06-26 14:21+0100\n"
+"PO-Revision-Date: 2009-07-01 03:08-0400\n"
+"Last-Translator: Abdulhadi Hairan <abdulhadi@paiwastoon.com.af>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
+
+#: gnome/olpc-switch-to-sugar:23
+msgid "Could not switch desktop: an internal error has occurred."
+msgstr "ډېسکټاپ ته تګ ونشو: یوه داخلي تېروتنه رامنځته شوه."
+
+#: gnome/olpc-switch-to-sugar:35
+msgid ""
+"Click OK to switch to the Sugar learning environment.\n"
+"All active applications will be closed."
+msgstr ""
+"د شوګر زده کړې چاپیریال ته د تللو لپاره په هوکی کلیک کړه. ټول فعال کاریالونه "
+"به بند شي."
+
+#: sugar/view.py:48
+msgid ""
+"Sugar is the graphical user interface that you are looking at. It is a "
+"learning environment designed for children."
+msgstr ""
+"شوګر د مخیال هغه کښنیز کاروونکی دی چې ته یې لټوې. دا د زده کړې چاپیریال دی "
+"چې د ماشومانو لپاره جوړ شوی دی. "
+
+#: sugar/view.py:55
+msgid ""
+"As an alternative to Sugar, you can switch to the GNOME desktop environment "
+"by clicking the button below."
+msgstr ""
+"د شوګر د متبادل په توګه٬ ته د لاندې تڼۍ په کلیکولو سره د GNOME ډېسکټاپ "
+"چاپېریال ته ورتللی شې. "
+
+#: sugar/view.py:62
+msgid ""
+"Restart your computer to complete the change to the GNOME desktop "
+"environment."
+msgstr ""
+"د GNOME ډېسکټاپ چاپیریال د بدلون د بشپړولو لپاره خپل کمپیوټر بیاچالان کړه. "
+
+#: sugar/view.py:70
+msgid ""
+"Remember, you can return to Sugar later by clicking on the <b>Switch to "
+"Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> "
+"button below if you would like to continue using Sugar as your desktop "
+"environment."
+msgstr ""
+"یاد وساته چې٬ ته شوګر ته وروسته د GNOME په ډېسکټاپ د <b>شوګر ته تګ</b> په "
+"نښکه کلیکولو سره تللی شې. او یا٬ لاندې د <b>بدلونونه لغوه کړه</b> په تڼۍ "
+"کلیک کړه که غواړې چې د شوګر د خپل ډېسکټاپ د چاپېریال په توګه کارولو ته دوام "
+"ورکړې. "
+
+#: sugar/view.py:82
+msgid "Switch to GNOME"
+msgstr "GNOME ته لاړ شه"
+
+#: sugar/view.py:95
+msgid "Cancel changes"
+msgstr "بدلونونه لغوه کړه"
+
+#: sugar/view.py:99
+msgid "Restart now"
+msgstr "اوس بیاچالان کړه"
+
+#: sugar/view.py:106
+msgid "Set Sugar as active desktop"
+msgstr "شوګر د فعال ډېسکټاپ په توګه وټاکه"
+
+#: sugar/view.py:112
+msgid ""
+"You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> "
+"icon on the GNOME desktop. This is also available from the GNOME "
+"<b>Applications</b> menu."
+msgstr ""
+"ته د GNOME په ډېسکټاپ د <b>شوګر ته تګ</b> د نښکې په کلیکولو سره بېرته شوګر "
+"ته تللی شې. دا د GNOME د <b>کاریالونه</b> غورنۍ څخه هم ترلاسه کېدای شي. "
+
+#: sugar/view.py:157
+msgid "Active desktop environment: "
+msgstr "فعال ډېسکټاپ چاپېریال:"
