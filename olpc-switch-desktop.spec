@@ -1,5 +1,5 @@
 Name:		olpc-switch-desktop
-Version:	0.4
+Version:	0.5
 Release:	1%{?dist}
 Summary:	OLPC desktop switching utilities
 
@@ -8,7 +8,7 @@ Group:		System Environment/Base
 URL:		http://dev.laptop.org/git/users/dsd/olpc-switch-desktop
 Source0:	http://dev.laptop.org/~dsd/olpc-switch-desktop/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch: 	noarch
+BuildArch:	noarch
 
 BuildRequires:	gettext
 Requires:		python, sugar, gtk2, desktop-file-utils, dbus
@@ -58,18 +58,6 @@ fi
 
 
 %changelog
-* Mon Jun 22 2009 Daniel Drake <dsd@laptop.org> - 0.4-1
-- Rewrite GNOME app in PyGTK
-
-* Fri Jun 19 2009 Daniel Drake <dsd@laptop.org> - 0.3-1
-- Fix Sugar control panel icon installation
-
-* Fri Jun 19 2009 Daniel Drake <dsd@laptop.org> - 0.2-1
-- GNOME app: add icon, put launcher on desktop by default, auto-logout after
-  change
-- Sugar extension: add screenshots, add restart button, don't crash on absence
-  of .olpc-active-desktop
-
-* Mon Jun 15 2009 Daniel Drake <dsd@laptop.org> - 0.1-1
-- Initial release
+* Thu Jul  9 2009 Daniel Drake <dsd@laptop.org> - 0.5-1
+- Initial import
 
