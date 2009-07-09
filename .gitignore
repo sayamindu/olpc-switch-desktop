@@ -1,0 +1,12 @@
+Makefile
+Makefile.in
+configure
+install-sh
+missing
+configure
+config.log
+config.status
+autom4te.cache
+olpc-switch-desktop-*.tar.bz2
+*.swp
+aclocal.m4

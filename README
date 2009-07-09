@@ -13,34 +13,3 @@ launch.
 
 Author: Daniel Drake <dsd@laptop.org>
 
-
-INSTALLATION
-============
-
-Put the olpc-switch-to-sugar.desktop file under gnome/ in
-/usr/share/applications
-Put the olpc-switch-to-sugar executable somewhere in your $PATH
-
-Install the contents of the sugar directory at
-/usr/share/sugar/extensions/cpsection/switchdesktop/
-
-
-TODO
-====
-design review
-
-
-TODO: Sugar
-===========
-Make buttons a decent size
-screenshots of GNOME + Sugar
-i18n
-icon for sugar control panel
-
-
-TODO: GNOME
-===========
-entry on gnome desktop
-icon on gnome desktop
-cancel button
-
