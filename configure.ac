@@ -1,4 +1,4 @@
-AC_INIT([olpc-switch-desktop], [0.5])
+AC_INIT([olpc-switch-desktop], [0.6])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([sugar/model.py])
 AC_PREREQ([2.59])
