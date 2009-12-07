@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-08 01:19+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../sugar/__init__.py:23
+msgid "Switch desktop"
+msgstr ""
+
+#: ../sugar/view.py:48
+msgid ""
+"Sugar is the graphical user interface that you are looking at. It is a "
+"learning environment designed for children."
+msgstr ""
+
+#: ../sugar/view.py:55
+msgid ""
+"As an alternative to Sugar, you can switch to the GNOME desktop environment "
+"by clicking the button below."
+msgstr ""
+
+#: ../sugar/view.py:62
+msgid ""
+"Restart your computer to complete the change to the GNOME desktop "
+"environment."
+msgstr ""
+
+#: ../sugar/view.py:70
+msgid ""
+"Remember, you can return to Sugar later by clicking on the <b>Switch to "
+"Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> "
+"button below if you would like to continue using Sugar as your desktop "
+"environment."
+msgstr ""
+
+#: ../sugar/view.py:82
+msgid "Switch to GNOME"
+msgstr ""
+
+#: ../sugar/view.py:95
+msgid "Cancel changes"
+msgstr ""
+
+#: ../sugar/view.py:99
+msgid "Restart now"
+msgstr ""
+
+#: ../sugar/view.py:106
+msgid "Set Sugar as active desktop"
+msgstr ""
+
+#: ../sugar/view.py:112
+msgid ""
+"You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> "
+"icon on the GNOME desktop. This is also available from the GNOME "
+"<b>Applications</b> menu."
+msgstr ""
+
+#: ../sugar/view.py:157
+msgid "Active desktop environment: "
+msgstr ""
+
+#: ../gnome/olpc-switch-to-sugar.desktop.in.h:1
+msgid "Switch to Sugar"
+msgstr ""
