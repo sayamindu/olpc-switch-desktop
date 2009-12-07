@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Switch to Sugar
+_Name=Switch to Sugar
 Exec=olpc-switch-to-sugar
 Icon=olpc-switch-to-sugar
 Type=Application

@@ -1,0 +1,4 @@
+sugar/__init__.py
+sugar/model.py
+sugar/view.py
+gnome/olpc-switch-to-sugar.desktop.in

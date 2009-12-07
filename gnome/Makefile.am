@@ -1,8 +1,16 @@
-dist_bin_SCRIPTS = olpc-switch-to-sugar
+bin_SCRIPTS = olpc-switch-to-sugar
 
+@INTLTOOL_DESKTOP_RULE@
 desktopdir=$(datadir)/applications
-dist_desktop_DATA = olpc-switch-to-sugar.desktop
+desktop_in_files=olpc-switch-to-sugar.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop) 
 
 icondir=$(datadir)/icons/hicolor/scalable/apps
-dist_icon_DATA = olpc-switch-to-sugar.svg
+icon_DATA = olpc-switch-to-sugar.svg
 
+EXTRA_DIST =			\
+	    $(bin_SCRIPTS)	\
+	    $(desktop_DATA)	\
+	    $(icon_DATA)
+
+DISTCLEANFILES =  $(desktop_DATA)
