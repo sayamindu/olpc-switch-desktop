@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-08 01:19+0530\n"
+"POT-Creation-Date: 2009-12-08 01:27+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,16 @@ msgstr ""
 
 #: ../sugar/view.py:157
 msgid "Active desktop environment: "
+msgstr ""
+
+#: ../gnome/olpc-switch-to-sugar:40
+msgid "Could not switch desktop: an internal error has occurred."
+msgstr ""
+
+#: ../gnome/olpc-switch-to-sugar:52
+msgid ""
+"Click OK to switch to the Sugar learning environment.\n"
+"All active applications will be closed."
 msgstr ""
 
 #: ../gnome/olpc-switch-to-sugar.desktop.in.h:1
