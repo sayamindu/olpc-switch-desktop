@@ -1,16 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR One Laptop per Child
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# Maruf Ovee <maruf@ankur.org.bd>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: olpc_switch_desktop VERSION\n"
 "Report-Msgid-Bugs-To: devel@lists.laptop.org\n"
 "POT-Creation-Date: 2009-06-26 14:21+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2009-07-07 13:44+0700\n"
+"Last-Translator: Maruf Ovee <maruf@ankur.org.bd>\n"
+"Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,63 +17,53 @@ msgstr ""
 
 #: gnome/olpc-switch-to-sugar:23
 msgid "Could not switch desktop: an internal error has occurred."
-msgstr ""
+msgstr "ডেস্কটপে পরিবর্তন করা যাবেনা: একটি অভ্যন্তরীণ ত্রুটি হয়েছে। "
 
 #: gnome/olpc-switch-to-sugar:35
 msgid ""
 "Click OK to switch to the Sugar learning environment.\n"
 "All active applications will be closed."
 msgstr ""
+"সুগার শেখার পরিবেশে পরিবর্তন করতে \"ঠিক আছে\" তে ক্লিক করো।\n"
+"সব সক্রিয় অ্যাপ্লিকেশন বন্ধ করে দেওয়া হবে।"
 
 #: sugar/view.py:48
-msgid ""
-"Sugar is the graphical user interface that you are looking at. It is a "
-"learning environment designed for children."
-msgstr ""
+msgid "Sugar is the graphical user interface that you are looking at. It is a learning environment designed for children."
+msgstr "সুগার হলো গ্রাফিকাল ব্যবহারকারী ইন্টারফেস যা তুমি দেখছো। এটি শিশুদের জন্য নকশা করা একটি শেখার পরিবেশ।"
 
 #: sugar/view.py:55
-msgid ""
-"As an alternative to Sugar, you can switch to the GNOME desktop environment "
-"by clicking the button below."
-msgstr ""
+msgid "As an alternative to Sugar, you can switch to the GNOME desktop environment by clicking the button below."
+msgstr "সুগারের বিকল্প হিসেবে, নিচের বোতামে ক্লিক করে তুমি GNOME ডেস্কটপ পরিবেশে পরিবর্তন করতে পারবে।"
 
 #: sugar/view.py:62
-msgid ""
-"Restart your computer to complete the change to the GNOME desktop "
-"environment."
-msgstr ""
+msgid "Restart your computer to complete the change to the GNOME desktop environment."
+msgstr "GNOME ডেস্কটপ পরিবেশে পরিবর্তন করতে তোমার কম্পিউটার পুনরায় শুরু করো।"
 
 #: sugar/view.py:70
-msgid ""
-"Remember, you can return to Sugar later by clicking on the <b>Switch to "
-"Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> "
-"button below if you would like to continue using Sugar as your desktop "
-"environment."
-msgstr ""
+msgid "Remember, you can return to Sugar later by clicking on the <b>Switch to Sugar</b> icon on the GNOME desktop. Or, click the <b>Cancel changes</b> button below if you would like to continue using Sugar as your desktop environment."
+msgstr "মনে রাখবে, GNOME ডেস্কটপে <b>সুগারে পরিবর্তন করা হবে</b> আইকনে ক্লিক করে তুমি পরে সুগারে ফেরত আসতে পারবে। অথবা, যদি তুমি তোমার ডেস্কটপ পরিবেশ হিসেবে সুগার ব্যবহার করে যেতে চাও তাহলে নিচের <b>পরিবর্তন বাতিল করা হবে</b> বোতামে ক্লিক করো।"
 
 #: sugar/view.py:82
 msgid "Switch to GNOME"
-msgstr ""
+msgstr "GNOME এ পরিবর্তন করো"
 
 #: sugar/view.py:95
 msgid "Cancel changes"
-msgstr ""
+msgstr "পরিবর্তনগুলো বাতিল করো"
 
 #: sugar/view.py:99
 msgid "Restart now"
-msgstr ""
+msgstr "এখন পুনরায় শুরু করো"
 
 #: sugar/view.py:106
 msgid "Set Sugar as active desktop"
-msgstr ""
+msgstr "সক্রিয় ডেস্কটপ হিসেবে সুগার কে নির্ধারণ করো"
 
 #: sugar/view.py:112
-msgid ""
-"You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> "
-"icon on the GNOME desktop. This is also available from the GNOME "
-"<b>Applications</b> menu."
-msgstr ""
+msgid "You can return to Sugar later, by clicking on the <b>Switch to Sugar</b> icon on the GNOME desktop. This is also available from the GNOME <b>Applications</b> menu."
+msgstr "GNOME ডেস্কটপের <b>সুগারে পরিবর্তন করা হবে</b> আইকনে ক্লিক করে, তুমি পরে সুগারে ফেরত যেতে পারবে। এটি GNOME <b>অ্যাপ্লিকেশন</b> মেনু থেকেও করা সম্ভব।"
 
 #: sugar/view.py:157
 msgid "Active desktop environment: "
-msgstr ""
+msgstr "সক্রিয় ডেস্কটপ পরিবেশ:"
+
